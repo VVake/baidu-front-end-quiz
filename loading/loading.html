@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.wrap{
+			position: absolute;
+			width: 250px;
+			height: 250px;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			margin:auto;
+		}
+		.backgroundCircle{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin:-80px 0 0 -80px;
+			z-index: 0;
+			border:80px solid rgb(251,139,188);
+			border-left-color: rgb(255, 41, 140);
+            border-bottom-color: rgb(255, 41, 140);
+			border-radius: 80px;
+		}
+		.halfRed{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin:-80px 0 0 -80px;
+			z-index: 3;
+			border:80px solid rgb(251,139,188);
+			border-right-color: rgb(255, 41, 140);
+		    border-top-color: rgb(255, 41, 140);
+		    border-left-color: transparent;
+		    border-bottom-color:transparent;
+			border-radius: 80px;
+			animation: maAnimation 2s infinite linear;
+		}
+		.halfPink{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin:-80px 0 0 -80px;
+			z-index: 2;
+			border:80px solid rgb(251,139,188);
+			border-left-color: transparent;
+		    border-bottom-color: transparent;
+		    border-right-color: rgb(251,139,188);
+		    border-top-color:rgb(251,139,188);
+			border-radius: 80px;
+			animation: maAnimation2 2s infinite linear;	
+		}
+		.outsideRing{
+			width: 220px;
+			height: 220px;
+			border:10px solid rgb(255, 41, 140);
+			border-radius: 50%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin:-120px 0 0 -120px;
+			border-top-color: transparent;
+			animation: maAnimation3 2s infinite linear;
+		}
+		@keyframes maAnimation{ /*红色半圆*/
+			0%{transform: rotate(0deg);}
+			25%{transform: rotate(-180deg);}
+			50%{z-index: 2;transform: rotate(-180deg);}
+			75%{transform: rotate(-360deg);}
+			100%{transform: rotate(-360deg);}
+		}
+		@keyframes maAnimation2{ /*粉色半圆*/
+			0%{transform: rotate(0deg);}
+			25%{transform: rotate(0deg);}
+			50%{transform: rotate(-180deg);}
+			75%{transform: rotate(-180deg);}
+			100%{transform: rotate(-360deg);}
+		}
+		@keyframes maAnimation3{
+			0%{transform: rotate(0deg);}
+			100%{transform: rotate(-360deg);}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="backgroundCircle"></div>
+		<div class="halfRed"></div>
+		<div class="halfPink"></div>
+		<div class="outsideRing"></div>
+	</div>
+</body>
+</html>
