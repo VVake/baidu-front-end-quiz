@@ -1,0 +1,53 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+#demo
+{
+    position: relative;
+
+    margin: 50px;
+}
+#smallBox
+{
+	position: relative;
+    width: 600px;
+    height: 400px;
+}
+#smallBox img
+{
+    width: 600px;
+    height: 400px;
+}
+#bigBox
+{
+    /*display: none;*/
+	position: absolute;
+	left: 650px;
+	top:0px;
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+}
+#bigBox img{
+	position: absolute;
+	height: 800px;
+	width: 1800px;
+}
+#magnifier
+{
+    position: absolute;
+    display: none;
+
+    width: 200px;
+    height: 200px;
+
+    cursor: move;
+
+    opacity: .5;
+    border: 1px solid #ccc;
+    background: #ffc;
+
+    filter: alpha(opacity=50);
+}

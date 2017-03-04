@@ -1,0 +1,103 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+#container
+{
+    position: relative;
+
+    width: 700px;
+    height: 467px;
+    margin: 50px;
+}
+#wrap {
+	width: 700px;
+	height: 467px;
+	background: url(timg.jpg);
+}
+#bBorder:after
+{
+	visibility: hidden;
+    position: absolute;
+    top: 20px;
+    left: 175px;
+
+    width: 3px;
+    height: 417px;
+
+    content: '';
+    -webkit-transition: all .55s ease;
+            transition: all .55s ease;
+
+    border-top: 5px solid rgba(153,153,153,0.5);
+    border-bottom: 5px solid rgba(153,153,153,0.5);
+}
+#bBorder:before
+{
+	visibility: hidden;
+    position: absolute;
+    top: 105px;
+    left: 20px;
+
+    width: 650px;
+    height: 1px;
+
+    content: '';
+    -webkit-transition: all .55s ease;
+            transition: all .55s ease;
+
+    border-right: 5px solid rgba(153,153,153,0.5);
+    border-left: 5px solid rgba(153,153,153,0.5);
+}
+
+#container:hover #bBorder:after
+{
+	visibility: visible;
+    left: 25px;
+	opacity: 1;
+    width: 650px;
+}
+#container:hover #bBorder:before
+{
+	visibility: visible;
+    top: 20px;
+	opacity: 1;
+    height: 427px;
+}
+#container:hover #wrap{
+	-webkit-filter:blur(2px);
+	-moz-filter:blur(2px);
+	-ms-filter:blur(2px);
+	filter: blur(2px;)
+}
+#innerWrap {
+	position: absolute;
+	background:-webkit-linear-gradient(left,#F00,#F60,#FF0,#0C0,#699,#06C,#909,#F00,#F60,#FF0,#0C0,#699,#06C,#909,#F00);
+	background:-webkit-linear-gradient(left,#000,#CCC,#000,#CCC,#000);
+	-webkit-text-fill-color:transparent;
+	/*-webkit-text-stroke:1px #fff;*/
+	-webkit-background-clip: text;
+	-webkit-background-size: 200% 100%;
+	background-position: -100% 0;
+	animation: masked-animation 3s infinite linear;
+
+}
+#bBorder a{
+	padding-left: 100px;
+	text-decoration: none;
+}
+@-webkit-keyframes masked-animation {
+    0%  { background-position: 0% 0;}
+    100% { background-position: -100% 0;}
+}
+#innerWrap{
+	position: absolute;
+	z-index: 1;
+	top: 135px;
+	left: 90px;
+	visibility: hidden;
+}
+#container:hover #innerWrap{
+	visibility: visible;
+}
