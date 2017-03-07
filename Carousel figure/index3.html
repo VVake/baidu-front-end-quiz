@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	img{
+		position: absolute;
+		transition: all 0.4s ease;
+	}
+	.wrap{
+		width: 1000px;
+		height: 1000px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: -500px 0 0 -500px;
+		perspective: 1000px;
+	}
+	.figures{
+		width: 800px;
+		height: 500px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: -250px 0 0 -400px;
+		transform-style: preserve-3d;
+		/*transform: rotateX(-30deg);*/
+	}
+</style>
+<body>
+	<div class="wrap">
+		<div class="figures">
+			<img src="images/1.jpg" alt="">
+			<img src="images/3.jpg" alt="">
+			<img src="images/4.jpg" alt="">
+			<img src="images/6.jpg" alt="">
+			<img src="images/8.jpg" alt="">
+		</div>
+	</div>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var image = $("img");
+			var length = image.length;
+			image.each(function(index) {
+				initialize($(this),index);
+				// move($(this),$(this).attr("index"));//明天用settimeout实现循环，下面用function来做动画
+
+			});
+			setInterval(move,2000);
+			function changeStyle(obj,p1,p2,p3,p4){
+				obj.css({
+					opacity:p1,
+					transform:'translate3d('+p2+'px,0,'+p3+'px) rotateY('+p4+'deg)'
+				})
+			}
+			function move(){
+				image.each(function(index){
+					var attr = $(this).attr("index");
+					var obj=$(this);
+						switch (parseInt(attr)) {
+						case 0:
+							// obj.css({
+							// 	opacity:0.8,
+							// 	transform : "translate3d(-300px,0,0) rotateY(30deg)"
+							// });
+							changeStyle(obj,1,-300,0,30);
+							obj.attr("index",1);
+							break;
+						case 1:
+							// obj.css({
+							// 	opacity:0,
+							// 	transform : "translate3d(-400px,0,-100px) rotateY(30deg)"
+							// });
+							changeStyle(obj,0,-600,-100,30);
+							obj.attr("index",2);
+							break;
+						case 2:
+							// obj.css({
+							// 	opacity:0,
+							// 	transform : "translate3d(400px,0,-100px) rotateY(-30deg)"
+							// });
+							changeStyle(obj,0,600,-100,-30);
+							obj.attr("index",3);
+							break;
+						case 3:
+							// obj.css({
+							// 	opacity:0.8,
+							// 	transform : "translate3d(300px,0,0) rotateY(-30deg)"
+							// });
+							changeStyle(obj,1,300,0,-30);
+							obj.attr("index",4);
+							break;
+						case 4:
+							// obj.css({
+							// 	opacity:1,
+							// 	transform : "translate3d(0,0,100px)"
+							// });
+							changeStyle(obj,1,0,100,0);
+							obj.attr("index",0);
+							break;
+						default:
+							// statements_def
+							break;
+					}
+				})
+
+			}
+			function initialize(obj,index){
+				switch (index) {
+					case 0:
+						obj.css({
+							opacity:1,
+							transform : "translate3d(0,0,100px) rotateY(0deg)"
+						});
+						obj.attr("index",0);
+						break;
+					case 1:
+						obj.css({
+							opacity:0.8,
+							transform : "translate3d(-300px,0,0) rotateY(30deg)"
+						});
+						obj.attr("index",1);
+						break;
+					case 2:
+						obj.css({
+							opacity:0,
+							transform : "translate3d(-400px,0,-100px) rotateY(30deg)"
+						});
+						obj.attr("index",2);
+						break;
+					case length-2:
+						obj.css({
+							opacity:0,
+							transform : "translate3d(400px,0,-100px) rotateY(-30deg)"
+						});
+						obj.attr("index",length-2);
+						break;
+					case length-1:
+						obj.css({
+							opacity:0.8,
+							transform : "translate3d(300px,0,0) rotateY(-30deg)"
+						});
+						obj.attr("index",length-1);
+						break;
+					default:
+						// statements_def
+						break;
+				}
+			}
+		})
+	</script>
+</body>
+</html>
