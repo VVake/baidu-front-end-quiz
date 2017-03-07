@@ -50,8 +50,6 @@
 			var length = image.length;
 			image.each(function(index) {
 				initialize($(this),index);
-				// move($(this),$(this).attr("index"));//明天用settimeout实现循环，下面用function来做动画
-
 			});
 			setInterval(move,2000);
 			function changeStyle(obj,p1,p2,p3,p4){
