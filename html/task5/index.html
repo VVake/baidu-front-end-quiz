@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>三栏布局</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			font-size: 10px
+		}
+		.wrap{
+			width: 100%;
+			min-width: 800px;
+		}
+		.header{
+			background:#333;
+			height: 60px;
+		}
+		.content{
+			background:#dedede;
+		}
+		.content:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.footer{
+			background: #000;
+			height: 70px;
+			line-height: 70px;
+			text-align: center;
+			color: white;
+		}
+		.wrapMain{
+			float: left;
+			width: 100%;
+		}
+		.main{
+			margin: 0 400px 0 0;
+		}
+		.sideBar{
+			float:right;
+			width:400px;
+			margin-left: -400px;
+		}
+		.header ul{
+			line-height: 60px;
+		}
+		.header ul li{
+			float:right;
+		}
+		.header ul li a{
+			text-decoration: none;
+			color: #fff;
+			padding-right: 25px;
+		}
+		.sideBarContent{
+			background: #fff;
+			border:1px solid #ccc;
+			box-shadow: 2px 0 5px #000;
+			margin: 20px 20px 0 20px;
+			padding: 20px;
+			font-size: 8px;
+		}
+		form{
+			margin-top: 20px;
+		}
+		input::-webkit-input-placeholder{
+		    color:#c7c1b2;
+		}
+		form div{
+			margin-top: 5px;
+		}
+		form div:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		form label,form span{
+			float: left;
+			width: 100px;
+			text-align: right;
+			padding-right: 15px;
+		}
+		button{
+			width:320px;
+			height:35px;
+			color:white;
+			background: #3050d3;
+			border:1px solid #ccc;
+			border-radius: 5px;
+			margin-top:5px;
+		}
+		.mainContent{
+			min-width: 200px;
+			margin: 20px 0  20px 20px;
+			background: #FFF;
+			border:1px solid #ccc;
+			box-shadow: 2px 0 5px  #000;
+			padding: 20px;
+		}
+		.imageBox{
+			float: left;
+			margin:10px;
+			text-align: center;
+			border:1px solid #ccc;
+			padding: 10px;
+
+		}
+		.imageBox img{
+			width: 150px;
+			height: 150px;
+		}
+		.mainContent:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+		table{
+			border-right:1px solid #ccc;
+			border-bottom: 1px solid #ccc;
+			border-collapse: collapse;
+		}
+		td{
+			border-top: 1px solid #ccc;
+			border-left:1px solid #ccc;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="nav">
+				<ul>
+					<li><a href="#">导航链接四</a></li>
+					<li><a href="#">导航链接三</a></li>
+					<li><a href="#">导航链接二</a></li>
+					<li><a href="#">导航链接一</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content">
+			<div class="wrapMain">
+				<div class="main">
+					<div class="mainContent">
+						<h1>文章一级标题</h1>
+						<h2>文章二级标题</h2>
+						<h6>文章作者 文章发表时间</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt est tempore id suscipit officia assumenda impedit odit recusandae laudantium voluptate soluta itaque ex quibusdam culpa quia, velit, nostrum. Quam, nemo!
+						</p>
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt est tempore id suscipit officia assumenda impedit odit recusandae laudantium voluptate soluta itaque ex quibusdam culpa quia, velit, nostrum. Quam, nemo!</p>
+						<img src="images/P_00.jpg" alt="">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit eos, officiis, sapiente eveniet, itaque dolorum aut id harum dignissimos eligendi tenetur architecto, quod quasi autem aspernatur accusantium temporibus nostrum sit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit eos, officiis, sapiente eveniet, itaque dolorum aut id harum dignissimos eligendi tenetur architecto, quod quasi autem aspernatur accusantium temporibus nostrum sit.</p>
+					</div>
+					<div class="mainContent">
+						<h1>另一篇文章一级标题</h1>
+						<h2>文章二级标题</h2>
+						<h6>文章作者 文章发表时间</h6>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt est tempore id suscipit officia assumenda impedit odit recusandae laudantium voluptate soluta itaque ex quibusdam culpa quia, velit, nostrum. Quam, nemo!
+						</p>
+						<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing <a href="#">这是一个链接</a>elit. Sunt est tempore id suscipit officia assumenda impedit odit recusandae laudantium voluptate soluta itaque ex quibusdam culpa quia, velit, nostrum. Quam, nemo!</p>
+						<img src="images/P_00.jpg" alt="">
+						<ul>
+							<li>列表项目一</li>
+							<li>列表项目二</li>
+							<li>列表项目三</li>
+						</ul>
+					</div>
+					<div class="mainContent">
+						<h1>图片</h1>
+						<div class="imageBox"><p>好看的图片</p><img src="images/P_00.jpg" alt=""></div>
+						<div class="imageBox"><p>好看的图片</p><img src="images/P_00.jpg" alt=""></div>
+						<div class="imageBox"><p>好看的图片</p><img src="images/P_00.jpg" alt=""></div>
+						<div class="imageBox"><p>好看的图片</p><img src="images/P_00.jpg" alt=""></div>
+						<div class="imageBox"><p>好看的图片</p><img src="images/P_00.jpg" alt=""></div>
+						<div class="imageBox"><p>好看的图片</p><img src="images/P_00.jpg" alt=""></div>
+						<div class="imageBox"><p>好看的图片</p><img src="images/P_00.jpg" alt=""></div>
+						<div class="imageBox"><p>好看的图片</p><img src="images/P_00.jpg" alt=""></div>
+						<div class="imageBox"><p>好看的图片</p><img src="images/P_00.jpg" alt=""></div>
+						<div class="imageBox"><p>好看的图片</p><img src="images/P_00.jpg" alt=""></div>
+					</div>
+					<div class="mainContent">
+						<h1>final</h1>
+						<h2>title</h2>
+						<h6>文章作者 发表时间</h6>
+						<ol>
+							<li>1</li>
+							<li>2</li>
+							<li>3</li>
+						</ol>
+						<p>下面是一个表格</p>
+						<table width="100%">
+							<tr>
+								<th width="40%">head</th>
+								<th width="40%">head</th>
+								<th width="20%">head</th>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td>1</td>
+								<td>2</td>
+								<td>3</td>
+							</tr>
+							<tr>
+								<td colspan="3" style="background: #ccc">zongji</td>
+							</tr>
+						</table>
+					</div>
+
+				</div>
+			</div>
+			<div class="sideBar">
+				<div class="sideBarContent">
+					<h1>这里以后是个侧栏，这是侧栏的标题</h1>
+					<form action="#">
+						<div class="box_1">
+						<label for="email">请输入邮箱地址</label>
+						<input id="email" type="text" placeholder="邮箱地址">
+						<p style="color:#c7c1b2;padding:5px 0 0 115px;">邮箱地址请按要求格式输入</p>
+						</div>
+						<div class="box_2">
+						<label for="password">请输入密码</label>
+						<input id="password"type="password">
+						</div>
+						<div class="box_3">
+						<label for="check-password">请重复输入密码</label>
+						<input id="check-password" type="password">
+						<p style="color:#c7c1b2;padding:5px 0 0 115px;">密码请为6-16位英文数字</p>
+						</div>
+						<div class="box_4">
+						<span>性别</span>
+						<label style="width:auto;" for="male"><input type="radio" name="sex" id="male">男</label>
+						<label style="width:auto;" for="female"><input type="radio" name="sex" id="female">女</label>
+						</div>
+						<div class="box_5">
+						<span>城市</span>
+						<select name="city" id="">
+							<option value="">浙江</option>
+							<option value="">杭州</option>
+						</select>
+						</div>
+						<div class="box_6">
+						<span>爱好</span>
+						<label style="width:auto;" for=""><input type="checkbox">运动</label>
+						<label style="width:auto;" for=""><input type="checkbox">艺术</label>
+						<label style="width:auto;" for=""><input type="checkbox">科学</label>
+						</div>
+						<div class="box_7">
+						<label for="" style="vertical-align:top;">个人描述</label>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<button>确认提交</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			授权所有@
+		</div>
+	</div>
+</body>
+</html>
