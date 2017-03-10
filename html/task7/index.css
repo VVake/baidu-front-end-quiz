@@ -18,6 +18,10 @@
     border-bottom: 1px solid #e6e6e7;
     background: #fff;
 }
+.headWrap{
+    width: 1280px;
+    margin: 0 auto;
+}
 .newWorld
 {
     font-size: 21px !important;
@@ -41,7 +45,7 @@
     font-size: 14px;
 
     text-decoration: none;
-    color: #c0c1c5;
+    color: #a5a7ac;
 	padding:10px;
     /*text-align: center;*/
     line-height: 36px;
@@ -64,9 +68,145 @@
 	color: #ea6665;
 }
 .main{
+    position: relative;
 	width: 100%;
-	height: 590px;
-	background: #000 url(images/图一.png) no-repeat 0 0/cover;
-	opacity: ;
+	height: 690px;
+	background: url(images/图一.png) no-repeat 0 0/100% 100%;
+    border-left:1px solid #dce2e7;
 }
+.main:after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+}
+.mainBoxText p{
+    color: #fff;
+}
+.mainBoxText p:first-child{
+    font:60px "MicrosoftYaHei";
+}
+.mainBoxText p:nth-child(2){
+    font:21px "MicrosoftYaHei";
+}
+.mainBoxText p:nth-child(3){
+    font:21px "MicrosoftYaHei";
+}
+.mainBoxText{
+    width: 1165px;
+    position: relative;
+    z-index: 2;
 
+    margin: 0 auto;
+    padding-left: 115px;
+    padding-top: 230px;
+}
+.mainBoxText button{
+    width: 320px;
+    height: 62px;
+    background: #e74f4d;
+    margin-top: 67px;
+    border:0;
+    color: #fff;
+    font:30px "MicrosoftYaHei";
+    line-height: 62px;
+    text-align: center;
+}
+.main2{
+    width: 100%;
+    height: 250px;
+    background: #fff;
+}
+.main2Content{
+    width: 1260px;
+    height: 250px;
+    margin: 0 auto;
+}
+.slogan{
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 120px;
+    padding-top: 130px;
+    text-align: center;
+    font:14px "SimHei";
+    color: #767777;
+}
+.slogan:after{
+    content:"";
+    display: inline-block;
+    position: absolute;
+    right: -74px;
+    top:130px;
+    border-right: 1px solid #aaaaaa;
+    width: 1px;
+    height: 52px;
+}
+.slogan:before{
+    content:"";
+    display: inline-block;
+    position: absolute;
+    right: -75px;
+    top:130px;
+    border-right: 1px solid #bbbbbb;
+    width: 1px;
+    height: 52px;
+}
+.sloganIcon1{
+    background: url(images/同心圆.png) no-repeat center 45px;
+}
+.sloganIcon2{
+    background: url(images/旗子.png) no-repeat center 45px;
+}
+.sloganIcon3{
+    background: url(images/小花.png) no-repeat center 45px;
+}
+.sloganIcon4{
+    background: url(images/方格.png) no-repeat center 45px;
+}
+.slogan:last-child:before{
+    border-right:0;
+}
+.slogan:last-child:after{
+    border-right:0;
+}
+.slogan:nth-child(1){
+    margin-left: 60px;
+}
+.slogan:nth-child(2){
+    margin:0 120px 0 120px;
+}
+.slogan:nth-child(3){
+    margin:0 120px 0 0;
+}
+.main3{
+    width: 100%;
+    height: 360px;
+    background: #edecec url(images/书.png) no-repeat center 90px;
+}
+.main3Content{
+    width: 1080px;
+    margin: 0 auto;
+    color: #8f8f8f;
+    font:55px "SimHei";
+    padding-left: 200px;
+    padding-top: 228px;
+}
+.main4{
+    width: 100%;
+    height: 340px;
+    border-left: 1px solid #ede8e4;
+    background: url(images/看地图.png) no-repeat;
+    background-size: 100% 100%;
+    background-position: scroll 0px -610px;
+}
+.main4Text{
+    width: 1280px;
+    font:21px "MicrosoftYaHei";
+    color: #fff;
+    text-align:center;
+}
