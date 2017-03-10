@@ -1,7 +1,7 @@
 window.onload = function(){
 	var input = document.getElementsByTagName("input");
 	for(var i = 0, length1 = input.length; i < length1; i++){
-		(function(num){	
+		(function(num){
 			var suggest = document.getElementsByTagName("p")[num];
 			var re =/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((.[a-zA-Z0-9_-]{2,3}){1,2})$/;
 			input[num].addEventListener('focus',function(){
@@ -73,11 +73,12 @@ window.onload = function(){
 								this.style.border ="1px solid #0C3";
 							}
 							break;
+						case 4:
 							if (this.value.length==0) {
 								suggest.innerHTML = "手机号码不可为空";
 								suggest.style.color = "red";
 								this.style.border ="1px solid red";
-							}else if ( ) {
+							}else if (!re.test(this.value)){
 								suggest.innerHTML = "手机号码格式错误";
 								suggest.style.color = "red";
 								this.style.border ="1px solid red";
@@ -88,7 +89,7 @@ window.onload = function(){
 							}
 							break;
 					}
-			})
-		})(i)
+			});
+		})(i);
 	}
 }
