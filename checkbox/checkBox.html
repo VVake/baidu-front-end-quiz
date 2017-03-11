@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义checkbox， radio样式</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		input[type=checkbox]{
+			display: none;
+		}
+		.styleOne{
+			width: 100px;
+			height:20px;
+			background:rgb(85,85,85);
+			border-radius: 5px;
+			position: relative;
+			left: 200px;
+			top: -20px;
+		}
+		.style1{
+			display: block;
+			width: 30px;
+			height: 30px;
+			border-radius:50%;
+			background-color: #CCC;
+			position: absolute;
+			top:-5px;
+			left: -3px;
+			cursor: pointer;
+/*			-webkit-transition: all .25s ease;
+			   -moz-transition: all .25s ease;
+			    -ms-transition: all .25s ease;
+			     -o-transition: all .25s ease;*/
+			        transition: all 0.5s ease;
+		}
+		.styleOne #style1:checked + label{
+			left:76px;
+			background-color:rgb(38,202,40);
+		}
+
+		.styleTwo{
+			width: 100px;
+			height:40px;
+			background:rgb(85,85,85);
+			border-radius: 20px;
+			position: relative;
+			left: 200px;
+			top: -20px;
+		}
+		.styleTwo span{
+			display: block;
+			width: 80px;
+			height: 2px;
+			position: absolute;
+			top:19px;
+			left:10px;
+			background-color: #000;
+			border-radius: 1px;
+		}
+		.style2{
+			display: block;
+			width: 30px;
+			height: 30px;
+			border-radius:50%;
+			background-color: #CCC;
+			position: absolute;
+			top:5px;
+			left:5px;
+			cursor: pointer;
+		/*	-webkit-transition: all .25s ease;
+			   -moz-transition: all .25s ease;
+			    -ms-transition: all .25s ease;
+			     -o-transition: all .25s ease;*/
+			        transition: all 0.5s ease;
+		}
+		.styleTwo #style2:checked + label{
+			left:65px;
+			background-color:rgb(38,202,40);
+		}
+
+		.styleThree{
+			width: 100px;
+			height:30px;
+			background:rgb(85,85,85);
+			border-radius: 15px;
+			position: relative;
+			left: 200px;
+			top: -20px;
+			padding: 0px;
+		}
+
+		.styleThree span:nth-of-type(1){
+			display: inline-block;
+			height: 30px;
+			line-height: 30px;
+			position: absolute;
+			top: 0;
+			left:10px;
+			z-index: 1;
+
+		}
+		.styleThree span:nth-of-type(2){
+
+			display: inline-block;
+			height: 30px;
+			line-height: 30px;
+			position: absolute;
+			top: 0;
+			Right:10px;
+			z-index: 1;
+		}
+		.style3{
+			display: block;
+			width: 30px;
+			height: 20px;
+			border-radius:15px;
+			background-color: #CCC;
+			position: absolute;
+			top:5px;
+			left: 7px;
+			z-index: 20;
+			cursor: pointer;
+		/*	-webkit-transition: all .25s ease;
+			   -moz-transition: all .25s ease;
+			    -ms-transition: all .25s ease;
+			     -o-transition: all .25s ease;*/
+			        transition: all 0.5s ease;
+		}
+		.styleThree #style3:checked + label{
+			left:63px;
+			background-color:rgb(38,202,40);
+		}
+		.styleThree #style3:checked + span{
+			color: rgb(38,202,40)}
+		.styleFour{
+			position: relative;
+			width: 30px;
+			border:1px solid #ccc;
+			background: rgb(238,238,238);
+		}
+		.styleFour label{
+			display: block;
+			height: 30px;
+			width: 30px;
+		}
+		.styleFour label:after{
+			opacity: 0.2;
+			content: "";
+			width: 9px;
+			height: 5px;
+			border:3px solid #333;
+			background: transparent;
+			position: absolute;
+			top: 6px;
+			left: 7px;
+			border-top: none;
+			border-right: none;
+			-webkit-transform: rotate(-45deg);
+			   -moz-transform: rotate(-45deg);
+			    -ms-transform: rotate(-45deg);
+			     -o-transform: rotate(-45deg);
+			        transform: rotate(-45deg);
+		}
+		.styleFour label:hover:after {
+			opacity: 0.8;
+		}
+		.styleFour input:checked + label:after{
+			opacity:1;
+		}
+	</style>
+</head>
+<body>
+	<h3>checkbox样式一</h3>
+	<div class="styleOne">
+		<input id="style1" type="checkbox">
+		<label class="style1" for="style1"></label>
+	</div>
+	<h3>checkbox样式二</h3>
+	<div class="styleTwo">
+		<span></span>
+		<input id="style2" type="checkbox">
+		<label class="style2" for="style2"></label>
+	</div>
+	<h3>checkbox样式三</h3>
+	<div class="styleThree">
+		
+		<input id="style3" type="checkbox">
+		<label class="style3" for="style3"></label>
+		<span>on</span><span>off</span>
+	</div>
+	<h3>checkbox样式四</h3>
+	<div class="styleFour">
+		<input id="style4" type="checkbox">
+		<label class="style4" for="style4"></label>
+	</div>
+</body>
+</html>

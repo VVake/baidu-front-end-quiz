@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义checkbox， radio样式</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		input{
+			display: none;
+		}
+		.radio{
+			display: inline-block;
+			width: 18px;
+			height: 18px;
+			background: url(http://p1.bqimg.com/567571/99322cf8c3283e42.png) no-repeat -23px -9px;
+		}
+
+		input[type=radio]:checked + label{
+			background: url(http://p1.bqimg.com/567571/99322cf8c3283e42.png) no-repeat -58px -9px;
+		}
+		.checkbox{
+			display: inline-block;
+			width: 16px;
+			height: 16px;
+			background: url(http://p1.bqimg.com/567571/99322cf8c3283e42.png) no-repeat -24px -32px;
+		}
+		input[type=checkbox]:checked + label{
+			background: url(http://p1.bqimg.com/567571/99322cf8c3283e42.png) no-repeat -59px -31px;
+		}
+	</style>
+</head>
+<body>
+	<input type = "radio" name = "rRadio" id = "rRadio1">
+	<label class = "radio" for = "rRadio1"></label>
+	<input type = "radio" name = "rRadio" id = "rRadio2">
+	<label class = "radio" for = "rRadio2"></label></br>
+	<input type = "checkbox" id = "cCheckbox1">
+	<label class = "checkbox" for = "cCheckbox1"></label>
+	<input type = "checkbox" id = "cCheckbox2">
+	<label class = "checkbox" for = "cCheckbox2"></label>
+</body>
+</html>

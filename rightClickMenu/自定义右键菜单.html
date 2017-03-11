@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            height: 300px;
+            width: 300px;
+        }
+        ul{
+            display: none;
+            /*margin:50px;*/
+            width:100px;
+            list-style: none;
+            text-indent: 10px;
+            line-height: 22px;
+            border:1px solid #dbeef3;
+            box-shadow: 0 0 5px 1px #ccc;
+             /*border:1px solid #c3d69b;*/
+             position: absolute;
+             background-color: rgba(107,194,53,0.5);
+        }
+        a{
+            text-decoration: none;
+            color:rgb(167,200,226);
+        }
+        li:hover,li:hover a{
+            color:#4f91bd;
+            background-color:#fbd5b5;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+    <div id="test">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat adipisci, provident laudantium unde nesciunt. Aut ad non eius. Tenetur, perferendis ex sunt vitae soluta. Sed vitae, nobis obcaecati at minima.</p>
+    </div>
+    <ul>
+        <li><a href="">test1</a></li>
+        <li><a href="">test2</a></li>
+    </ul>
+    <script type="text/javascript">
+        var menu = document.getElementsByTagName("ul")[0];
+        document.onmousedown = function(e){
+            var mouseNum  = e.button;
+            if(mouseNum==2){
+                showMenu(e);
+            }else{
+                menu.style.display="none";
+            }
+        }
+
+    function showMenu(e){
+        // var menu = document.getElementsByTagName("ul")[0];
+        menu.style.display="block";
+        menu.style.left = e.clientX+"px";
+        menu.style.top = e.clientY+"px";
+    }
+    </script>
+</body>
+</html>
