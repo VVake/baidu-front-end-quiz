@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task3</title>
+	<style>
+		*{
+			margin:0;
+			padding-left: 0;
+		}
+		body{
+			font-size: 14px;
+		}
+		.wrapper{
+			width: 600px;
+			margin:50px;
+		}
+		input{
+			vertical-align: -2px;
+			margin-right: 5px;
+		}
+		label{
+			display: inline-block;
+			margin: 0 50px 20px 50px;
+		}
+		p{
+			display: none;
+		}
+		p select{
+			width: 150px;
+			height: 30px;
+			border:1px solid #ccc;
+			border-radius: 3px;
+			padding-left: 5px;
+			margin-right: 20px;
+			display: none;
+		}
+		p span{
+			margin-right: 10px;
+		}
+		.current{
+			display: inline-block;
+		}
+		.university{
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<form action="#" class="ocupation">
+			<div>
+				<label for="student"><input type="radio" name="checkIsStudent" id="student" checked>在校生</label>
+				<label for="non-student"><input type="radio" name="checkIsStudent" id="non-student">非在校生</label>
+			</div>
+			<div>
+				<p class="isStudent current">
+					<span>学校</span>
+					<select name="" id="city" class="current" >
+						<option value="BeiJing">北京</option>
+						<option value="ZheJiang">浙江</option>
+						<option value="WenZhou">温州</option>
+					</select>
+					<select name="" id="" class="university current">
+						<option value="">北京1</option>
+						<option value="">北京2</option>
+					</select>
+					<select name="" id="" class="university ">
+						<option value="">浙江1</option>
+						<option value="">浙江2</option>
+					</select>
+					<select name="" id="" class="university ">
+						<option value="">温州1</option>
+						<option value="">温州2</option>
+					</select>
+				</p>
+				<p class="notStudent">
+					<span>就业单位</span>
+					<input type="text" style="width: 300px">
+				</p>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		window.onload = function(){
+			var city = document.getElementById("city");
+			var uni = document.getElementsByClassName("university");
+			var inputs = document.getElementsByTagName("input");
+			var tabs = document.getElementsByTagName("p");
+			city.onchange = function () {
+				var index = city.selectedIndex;
+				for(var i = 0, length1 = uni.length; i < length1; i++){
+					uni[i].className="university";
+				}
+				uni[index].className="university current";
+			};
+			for(var i = 0, length1 = inputs.length-1; i < length1; i++){
+				(function(num){
+					inputs[i].onclick = function(){
+					for(var i = 0, length1 = tabs.length; i< length1; i++){
+						tabs[i].className=" ";
+					}
+					tabs[num].className="current";
+					};
+				})(i);
+			};
+		}
+	</script>
+</body>
+</html>
