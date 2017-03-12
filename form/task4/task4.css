@@ -56,7 +56,7 @@ ul{
 	z-index: 999;
 	left: 50px;
 	top: 50px;
-	transform-origin: 100% 100% 50px;
+	transform-origin: 50% 50% 25px;
 	transform: rotateY(0deg) translate3d(0,0,0);
 	transition: all 1s linear;
 	/*animation: myAnimation 20s infinite linear;*/
