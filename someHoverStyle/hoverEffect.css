@@ -14,7 +14,7 @@
 #wrap {
 	width: 700px;
 	height: 467px;
-	background: url(timg.jpg);
+	background: url(39.jpg) 0 0/contain;
 }
 #bBorder:after
 {
